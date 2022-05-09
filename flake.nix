@@ -7,22 +7,6 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs."millie-master".dir   = "master";
-  inputs."millie-master".owner = "nim-nix-pkgs";
-  inputs."millie-master".ref   = "master";
-  inputs."millie-master".repo  = "millie";
-  inputs."millie-master".type  = "github";
-  inputs."millie-master".inputs.nixpkgs.follows = "nixpkgs";
-  inputs."millie-master".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
-  
-  inputs."millie-0_1_0".dir   = "0_1_0";
-  inputs."millie-0_1_0".owner = "nim-nix-pkgs";
-  inputs."millie-0_1_0".ref   = "master";
-  inputs."millie-0_1_0".repo  = "millie";
-  inputs."millie-0_1_0".type  = "github";
-  inputs."millie-0_1_0".inputs.nixpkgs.follows = "nixpkgs";
-  inputs."millie-0_1_0".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
-  
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@inputs:
   let 
     lib  = flakeNimbleLib.lib;
